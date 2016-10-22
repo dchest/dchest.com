@@ -12,6 +12,8 @@ according to [Yandex](https://yandex.com/) for some time. Later I burned out
 and essentially stopped blogging; while that blog is still online, I publish
 only one or two posts per year.
 
+<!--more-->
+
 Today twitters, facebooks and telegrams took all the audience, and while there
 are still many blogs out there (probably even more than before), it’s quite
 different from what we had in those days. Even WordPress.com now tells us to
@@ -64,6 +66,6 @@ boom are dead, but he’s been blogging for many years and it doesn’t look lik
 he’s going to stop.  He grew his audience tremendously. Huge inspiration!
 
 So, right now I’m firing Vim, creating a new post, typing `kkr build &&
-./rsync` to publish this post using [my homegrown artisanal static site
+./rsync.sh` to publish this post using [my homegrown artisanal static site
 builder](http://github.com/dchest/kkr), and hoping that I’ll continue doing
 this a few times a week.

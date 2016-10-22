@@ -10,8 +10,16 @@ seo_title: dchest.org
     <h2 class="post-title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></h2>
   </header>
 
-  <div class="post-content">
-    {{.Content}}
+  {{if .ShortContent}}
+    <div class="post-content">
+      {{.ShortContent}}
+    </div>
+    <p><a class="post-more-link" href="{{.URL}}#more">Continue reading »</a></p>
+  {{else}}
+    <div class="post-content">
+      {{.Content}}
+    </div>
+  {{end}}
   </div>
 
   <footer class="post-meta">
