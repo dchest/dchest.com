@@ -24,8 +24,8 @@ My main writing output today is in Twitter: every day I usually post a few
 used to write. (I think this significantly contributed to shortening of my
 attention span.)
 
-Today I watched this Michael Hyatt’s video from 2013 and it inspired me to
-maybe start writing again:
+Today I watched this [Michael Hyatt’s](https://michaelhyatt.com) video from
+2013 and it inspired me to maybe start writing again:
 
 <style>
 .embed-responsive {
@@ -68,4 +68,4 @@ he’s going to stop.  He grew his audience tremendously. Huge inspiration!
 So, right now I’m firing Vim, creating a new post, typing `kkr build &&
 ./rsync.sh` to publish this post using [my homegrown artisanal static site
 builder](http://github.com/dchest/kkr), and hoping that I’ll continue doing
-this a few times a week.
+this a few times each week.
