@@ -1,0 +1,26 @@
+---
+layout: default
+title: Page not found
+---
+<div style="max-width: 740px">
+
+<h2>Page not found.</h2>
+
+<p>
+  Unfortunately, the page you've requested has not been
+  found on our server. Most likely it disappeared due to
+  my error. Please let me know about that by sending a message to
+<a href="mailto:dmitry@codingrobots.com">dmitry@codingrobots.com</a>.
+Thanks!</p>
+
+<a href="/">Go to home page</a>
+
+<h3>Latest articles</h3>
+<ul>
+  {{range .Site.Posts.Limit 10}}
+  <li><a href="{{.Meta.url}}">{{.Meta.title}}</a></li>
+  {{end}}
+  <li><a href="/archive/"><b>All articles</b></a></li>
+</ul>
+
+</div>

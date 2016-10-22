@@ -1,0 +1,15 @@
+name: dchest.org
+author: "Dmitry Chestnykh"
+permalink: /:name/
+url: https://dchest.org
+#search_index: /search/data/search-index.js
+
+filters:
+  .html: [htmlmin, scripts, styles]
+
+properties:
+  onion: http://sellmefmabkgispl.onion
+  like_title: "dchest.org"
+  twitter_name: dchest
+  urls:
+    twitter: https://twitter.com/dchest

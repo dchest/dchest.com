@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body, textarea, input, select {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a:link,
+a:visited {
+  color: #0D47A1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font: 13px Consolas, "Roboto Mono", "Liberation Mono", Menlo, "DejaVu Sans Mono", Courier, monospace;
+  color: #555;
+  background-color: transparent;
+  padding: 0;
+}
+
+blockquote {
+  padding: 0 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee;
+  font-size: 16px;
+  color: #555;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+address {
+  font-style: normal;
+}
+
+
+main,
+#mf,
+#mh > nav {
+  display: block;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* Masthead */
+
+#mh {
+  border-bottom: 1px solid #eee;
+}
+
+#mh > nav {
+  position: relative;
+  padding: 5px 15px;
+}
+
+#mh h1 {
+  position: absolute;
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+  margin: 9px 20px 0 0;
+}
+
+#mh h1 a:link,
+#mh h1 a:visited {
+  text-decoration: none;
+}
+
+#mh a:link,
+#mh a:visited {
+  color: #444;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+#mh ul {
+  list-style: none;
+  margin: 0 0 0 120px;
+  padding: 5px;
+}
+
+#mh ul > li {
+  display: inline-block;
+}
+
+/* Footer */
+
+#mf {
+  font-size: 14px;
+  clear: both;
+}
+
+a.feed {
+  padding: 2px 4px;
+  background: #FFE0B2;
+  color: #111;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+
+/* Posts */
+
+.post-content,
+.page-content {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.post {
+  margin: 0 30px 40px 0;
+}
+
+.page-header,
+.post-title {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.post-title > a:link,
+.post-title > a:visited {
+  color: #333;
+}
+
+.post-title > a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.post-content a:link {
+  text-decoration: underline;
+}
+
+.post-content a:visited,
+.archive a:visited {
+  color: #512DA8;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content > p:last-child {
+  margin-bottom: 0;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.post-date a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* Comments for old imported posts */
+
+.comments {
+  margin: 30px 0;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-date {
+  color: #999;
+}
+
+.comment-date:before {
+  content: ' / ';
+}
+
+.comment-body {
+  padding-left: 15px;
+}

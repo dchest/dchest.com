@@ -1,0 +1,28 @@
+---
+layout: blog
+---
+<article class="post">
+	<header>
+		<h2 class="post-title">{{.Page.title}}</h2>
+	</header>
+
+	<div class="post-content">
+		{{.Content}}
+	</div>
+
+	<footer class="post-meta">
+		<div class="post-date">
+			{{.Page.date.Format "02 January 2006"}}
+		</div>
+	</footer>
+</article>
+
+<aside>
+	<h3>Three latest articles:</h3>
+	<ul>
+		{{range .Site.Posts.Limit 3}}
+		<li><a href="{{.Meta.url}}">{{.Meta.title}}</a></li>
+		{{end}}
+		<li><a href="/archive/"><b>List of all articles</b></a></li>
+	</ul>
+</aside>

@@ -1,0 +1,6 @@
+---
+- name: global-css
+  files:
+    - assets/css/site.css
+  filter: cssmin
+  outname: $

@@ -1,0 +1,27 @@
+---
+layout: blog
+title: dchest.org
+seo_title: dchest.org
+---
+
+{{range .Site.Posts.Limit 10}}
+<article class="post">
+  <header>
+    <h2 class="post-title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></h2>
+  </header>
+
+  <div class="post-content">
+    {{.Content}}
+  </div>
+
+  <footer class="post-meta">
+    <div class="post-date">
+      <a href="{{.Meta.url}}">{{.Date.Format "02 January 2006"}}</a>
+    </div>
+  </footer>
+</article>
+{{end}}
+
+<footer class="blog-footer">
+  <a href="/archive/" class="btn btn-o">All articles</a>
+</footer>
