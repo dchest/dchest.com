@@ -65,7 +65,7 @@ helped me monetize [I Write Like](https://iwl.me) — and I’ve been following 
 boom are dead, but he’s been blogging for many years and it doesn’t look like
 he’s going to stop.  He grew his audience tremendously. Huge inspiration!
 
-So, right now I’m firing Vim, creating a new post, typing `kkr build &&
+So, right now I’m firing up Vim, creating a new post, typing `kkr build &&
 ./rsync.sh` to publish this post using [my homegrown artisanal static site
 builder](http://github.com/dchest/kkr), and hoping that I’ll continue doing
 this a few times each week.
