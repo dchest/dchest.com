@@ -5,9 +5,9 @@ title: "How to not give a fuck about business trends to find your niche"
 
 [NearlyFreeSpeech.NET](https://www.nearlyfreespeech.net) is a sharing hosting
 provider with a pretty unique approach. The amount of fucks they give about
-trends, be it industry business models or cloud stuff or "fanatical support™
-with customer champions", is close to zero. This is adorable and I highly
-respect such people.
+trends, be it business models popular in industry or cloud stuff or "fanatical
+support™ with customer champions", is close to zero. This is adorable and I
+highly respect such people.
 
 <!--more-->
 
