@@ -25,9 +25,13 @@ a:hover {
 
 code {
   font: 13px Consolas, "Roboto Mono", "Liberation Mono", Menlo, "DejaVu Sans Mono", Courier, monospace;
-  color: #555;
+  color: #333;
   background-color: transparent;
   padding: 0;
+}
+
+pre {
+  line-height: 1.2;
 }
 
 blockquote {
