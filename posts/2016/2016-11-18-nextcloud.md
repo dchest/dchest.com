@@ -12,8 +12,8 @@ title: Synching Android and macOS with Nextcloud
 > with our terms or policies or if we are investigating suspected misconduct.
 > — [Google](https://www.google.com/policies/terms/regional.html)
 
-I recently set up my own [Nextcloud](https://nextcloud.com) server to enable
-synching of contacts, calendars and files between my laptop and Android
+I recently set up my own [Nextcloud](https://nextcloud.com) server to
+synchronize contacts, calendars and files between my laptop and Android
 smartphone without intermediaries. Here are the client tools I used.
 
 <!--more-->
