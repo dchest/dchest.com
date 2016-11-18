@@ -5,7 +5,12 @@ title: Synching Android and macOS with Nextcloud
 
 > Google and Microsoft are further along on the technology, but haven't quite
 > figured it out yet - tie all of our products together, so we further lock
-> customers into our ecosystem.  — [Steve Jobs](http://www.businessinsider.com/email-reveals-steve-jobss-secret-plans-2014-4)
+> customers into our ecosystem.
+> — [Steve Jobs](http://www.businessinsider.com/email-reveals-steve-jobss-secret-plans-2014-4)
+
+> We may suspend or stop providing our services to you if you do not comply
+> with our terms or policies or if we are investigating suspected misconduct.
+> — [Google](https://www.google.com/policies/terms/regional.html)
 
 I recently set up my own [Nextcloud](https://nextcloud.com) server to enable
 synching of contacts, calendars and files between my laptop and Android
