@@ -17,6 +17,9 @@ Currently I'm reorganizing my computing life:
 
 * Switching my servers from Linux to FreeBSD.
 * Switching from various "personal clouds" to [my own self-hosted](https://dchest.org/nextcloud/).
+* Ordered parts to try fixing my old white unibody MacBook (broken power board)
+  and installing something interesting on it (Qubes, FreeBSD or OpenBSD,
+  depending on which OS has the best support for it).
 
 I'm also in planning stages for my new secret project involving cryptography,
 web apps and document editing. I'm also consulting on security and crypto for 0
