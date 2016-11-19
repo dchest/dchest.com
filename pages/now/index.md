@@ -21,9 +21,9 @@ Currently I'm reorganizing my computing life:
   and installing something interesting on it (Qubes, FreeBSD or OpenBSD,
   depending on which OS has the best support for it).
 
-I'm also in planning stages for my new secret project involving cryptography,
-web apps and document editing. I'm also consulting on security and crypto for 0
-to 999 clients.
+I'm in planning stages for my new secret project involving cryptography, web
+apps and document editing. I'm also consulting on security and crypto for 0 to
+999 clients.
 
 ## What I am reading
 
