@@ -107,6 +107,13 @@ apps rather than fancy. Writeily Pro, on the other hand, has a quite nice UI.
  style="max-width: 32%; border: 1px solid #eee"
 >
 
+**Update (2016-12-03):** QOwnNotes froze while I was typing a huge note, and if
+not for my carefulness, I'd have lost it. Bugs happen, but I no longer trust
+this program and won't use or recommend it. Instead, for now I'll just stick
+with editing plain text notes with build-in editor in Nextcloud's web interface
+or vim.
+
+
 ## Final thoughts
 
 This whole setup is not perfect: there are some ugly apps, sync is not instant,
