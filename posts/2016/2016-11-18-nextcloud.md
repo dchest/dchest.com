@@ -22,7 +22,7 @@ smartphone without intermediaries. Here are the client tools I used.
 
 Nextcloud uses CalDAV protocol for synching contacts, calendars and tasks.
 
-Conveniently, macOS have built-in synching of Contacts, Calendar and Reminders
+Conveniently, macOS has built-in synching of Contacts, Calendar and Reminders
 apps using CalDAV. Just go to System Preferences &rarr; Internet Accounts,
 click Add Other Account, then add two CalDAV accounts: for calendar and
 contacts.
