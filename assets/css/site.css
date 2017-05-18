@@ -112,12 +112,18 @@ main,
 
 a.feed {
   padding: 2px 4px;
-  background: #FFE0B2;
   color: #111;
   border-radius: 3px;
   font-size: 12px;
 }
 
+a.feed.atom {
+    background: #FFE0B2;
+}
+
+a.feed.json {
+    background: #dff5dc;
+}
 
 /* Posts */
 
