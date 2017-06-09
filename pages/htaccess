@@ -23,6 +23,9 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+RewriteRule ^.well-known/(.*)$ - [L]
+
+
 # HSTS preload for 6 months
 Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains; preload"
 
