@@ -203,8 +203,9 @@ title: The ultimate md5(time())
 
     // Now the crazy part: coin() function is modelled after Dan Kaminsky's
     // "The 'Obviously Incorrect' Random Number Generator"
-    // <a href="https://gist.github.com/PaulCapestany/6148566">https://gist.github.com/PaulCapestany/6148566</a>
-    // but is a very primitive variant. It returns 0 or 1.
+    // <a href="https://gist.github.com/PaulCapestany/6148566">https://gist.github.com/PaulCapestany/6148566</a> or Twuewant/Truerand
+    // <a href="https://www.finnie.org/2011/09/25/introducing-twuewand/">https://www.finnie.org/2011/09/25/introducing-twuewand/</a>
+    // but is a very simplified variant. It returns 0 or 1.
     //
     // The idea is that we flip a bit for some specified time in a while loop
     // and then output the result. Turns out this bit flipping will vary since
