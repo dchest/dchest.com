@@ -4,7 +4,7 @@ title: The ultimate md5(time())
 ---
 
 <pre><code>
-// Written by Dmitry Chestnykh <dmitry@codingrobots.com>
+// Written by Dmitry Chestnykh &lt;dmitry@codingrobots.com&gt;
 // 2017-08-04. Public domain
 
 // Pseudorandom number generator based on jitter in JavaScript.
