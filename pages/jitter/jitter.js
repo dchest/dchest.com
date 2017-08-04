@@ -1,10 +1,4 @@
----
-layout: post
-title: The ultimate md5(time())
----
-
-<pre><code>
-// Written by Dmitry Chestnykh &lt;dmitry@codingrobots.com&gt;
+// Written by Dmitry Chestnykh <dmitry@codingrobots.com>
 // 2017-08-04. Public domain
 
 // Pseudorandom number generator based on jitter in JavaScript.
@@ -15,11 +9,9 @@ title: The ultimate md5(time())
 // !!!!   Use window.crypto.getRandomValues() instead   !!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// It's kinda inspired by <a href="http://www.chronox.de/jent.html">http://www.chronox.de/jent.html</a> idea,
+// It's kinda inspired by http://www.chronox.de/jent.html idea,
 // but I actually didn't read how it works before writing this one.
-</code></pre>
-<!--more-->
-<pre><code>
+
 // We'll start by implementing Gimli permutation: gimly() accepts
 // 48-byte state and permutes it in-place.
 //
@@ -66,12 +58,12 @@ title: The ultimate md5(time())
 // We will use Gimli for all our cryptographic purposes.
 //
 // For more info and explanation of how it works, see:
-// <a href="https://gimli.cr.yp.to">https://gimli.cr.yp.to</a>
+// https://gimli.cr.yp.to
 //
 // Useful reading regarding permutations and sponges:
-// <a href="http://keccak.noekeon.org">http://keccak.noekeon.org</a>, <a href="http://sponge.noekeon.org">http://sponge.noekeon.org</a>
+// http://keccak.noekeon.org, http://sponge.noekeon.org
 //
-<b>function gimli(s) {
+function gimli(s) {
     var r, x, y, z,
         a = s[0] | s[1] << 8 | s[2] << 16 | s[3] << 24,
         b = s[4] | s[5] << 8 | s[6] << 16 | s[7] << 24,
@@ -142,14 +134,14 @@ title: The ultimate md5(time())
     s[36] = j; s[37] = j >>> 8; s[38] = j >>> 16; s[39] = j >>> 24;
     s[40] = k; s[41] = k >>> 8; s[42] = k >>> 16; s[43] = k >>> 24;
     s[44] = l; s[45] = l >>> 8; s[46] = l >>> 16; s[47] = l >>> 24;
-}</b>
+}
 
 // This is our main function: it returns 32 random bytes (if you need more,
 // just use the result as a key for a stream cipher, for example, based on
 // Gimli). It accepts an optional rounds argument (will be explained later)
 // which is set to 16 if it's not given or if it's smaller than 16.
-<b>function jitter(rounds) {
-    if (!rounds || rounds < 16) rounds = 16;</b>
+function jitter(rounds) {
+    if (!rounds || rounds < 16) rounds = 16;
 
     // This is our array of 256 Gimli states, each of 48 bytes.
     //
@@ -165,12 +157,12 @@ title: The ultimate md5(time())
     //
     // Why 256 specifically? Just for convenience — we can use one whole byte
     // as an index into it.
-    <b>var s = new Array(256);</b>
+    var s = new Array(256);
 
     // Initialize our states array.
-    <b>for (var i = 0; i < 256; i++) {</b>
+    for (var i = 0; i < 256; i++) {
         // Create each Gimli state.
-        <b>s[i] = new Uint8Array(48);</b>
+        s[i] = new Uint8Array(48);
 
         // Set 46th byte to a pseudorandom bit returned by coin() function.
         // This is intended to protect against bad timer resolution — the
@@ -178,11 +170,11 @@ title: The ultimate md5(time())
         // part of algorithm will not introduce a lot of jitter by jumping
         // around the state and running Gimli, we'll still have some 256 bits
         // (one bit per state) that are possibly unpredictable.
-        <b>s[i][46] = coin();</b>
+        s[i][46] = coin();
 
         // Set 47th byte to the index of this Gimli state
         // to make sure each state is distinct.
-        <b>s[i][47] = i;</b>
+        s[i][47] = i;
 
         // Why 46th and 47th? Later we'll XOR timestamp into the first 8 bytes
         // (and squeeze the next jump index from one of the first 32 bytes, but
@@ -198,13 +190,13 @@ title: The ultimate md5(time())
         // We don't permute the state initially, this will be done in each
         // round of the main algorithm.
         // Here's a handy way of looking what's inside each state:
-        <i>// console.log(Array.prototype.join.call(s[i]));</i>
-    <b>}</b>
+        // console.log(Array.prototype.join.call(s[i]));
+    }
 
     // Now the crazy part: coin() function is modelled after Dan Kaminsky's
     // "The 'Obviously Incorrect' Random Number Generator"
-    // <a href="https://gist.github.com/PaulCapestany/6148566">https://gist.github.com/PaulCapestany/6148566</a> or Twuewant/Truerand
-    // <a href="https://www.finnie.org/2011/09/25/introducing-twuewand/">https://www.finnie.org/2011/09/25/introducing-twuewand/</a>
+    // https://gist.github.com/PaulCapestany/6148566 or Twuewant/Truerand
+    // https://www.finnie.org/2011/09/25/introducing-twuewand/
     // but is a very simplified variant. It returns 0 or 1.
     //
     // The idea is that we flip a bit for some specified time in a while loop
@@ -222,11 +214,11 @@ title: The ultimate md5(time())
     // precise, this function will compensate for worse timers. (BTW,
     // window.performance.now() has 5 microsecond resolution according to the
     // standard).
-    <b>function coin() {
+    function coin() {
         var c = 0, start = window.performance.now();
         while (window.performance.now() - start === 0) c ^= 1;
         return c;
-    }</b>
+    }
 
     // Now, finally, the MAIN part.
     // Here are some variables that we allocate.
@@ -237,16 +229,16 @@ title: The ultimate md5(time())
     // setting the number into the DataView and then reading bytes from the
     // Uint8Array pointing to the same buffer. Nothing to see here, just a
     // JavaScript way of doing things.
-    <b>var buf = new Uint8Array(8),
-        view = new DataView(buf.buffer),</b>
+    var buf = new Uint8Array(8),
+        view = new DataView(buf.buffer),
 
         // Index is pointing to the current Gimli state in our states array.
         // We'll start with zero.
-        <b>index = 0,</b>
+        index = 0,
 
         // Sum is an index to the byte inside Gimli state,
         // it will be explained a bit later.
-        <b>sum = 0;</b>
+        sum = 0;
 
     // Go-o-o-o-o-o! Jump around and permute for the given number of rounds
     // times 256. A good almost minimal number of rounds that makes every state
@@ -261,12 +253,12 @@ title: The ultimate md5(time())
     // accesses, which is a bad thing, and can be used for side-channel
     // attacks. Oh well. We're trading one thing for another, and it's
     // probably hard to figure out the rest of bytes from jumps.
-    <b>for (var i = 0; i < rounds * 256; i++) {</b>
+    for (var i = 0; i < rounds * 256; i++) {
         // Measure time and convert it into 8 bytes.
-        <b>view.setFloat64(0, window.performance.now());
-        for (var j = 0; j < 8; j++) {</b>
+        view.setFloat64(0, window.performance.now());
+        for (var j = 0; j < 8; j++) {
             // XOR each timestamp byte into the current Gimli state.
-            <b>s[index][j] ^= buf[j];</b>
+            s[index][j] ^= buf[j];
             // Also collect the sum of the current timestamp bytes, which we'll
             // use modulo 32 to index into Gimli state. Why the sum instead of
             // just taking the most changing byte? We're not really sure about
@@ -274,15 +266,15 @@ title: The ultimate md5(time())
             // last byte would always be zero, so if we took it, we wouldn't
             // have introduced any variance. Adding all bytes seems like a good
             // way to ensure we'll catch at least one changed byte.
-            <b>sum += buf[j];
-        }</b>
+            sum += buf[j];
+        }
 
         // Permute the current Gimli state!
         // The permutation serves three purposes:
         // - mixes time input, turning state into a pseudorandom byte array,
         // - does lots of xors, shifts, ands, ors, introducing jitter,
         // - gets us the next pseudorandom index to jump to.
-        <b>gimli(s[index]);</b>
+        gimli(s[index]);
 
         // Set the next index of Gimli state to use to a byte got from the
         // permuted current state. Which byte to get depends on the sum
@@ -291,19 +283,19 @@ title: The ultimate md5(time())
         //
         // Accessing Gimli state this way and making this pseudorandom jump also
         // introduces some timing variance due to memory accesses.
-        <b>sum %= 32;
+        sum %= 32;
         index = s[index][sum];
-        sum = 0;</b>
+        sum = 0;
 
         // After all that, the time we'll measure in the next iteration will be
         // slighly different from the one we measured in this iteration. We
         // also kinda rolling a haystack — our whole state — due to the way the
         // next state to permute depends on timestamp and the previous state.
-    <b>}</b>
+    }
 
     // Finally, we need to extract some bytes form the state mess we created.
     // Allocate a new final Gimli state.
-    <b>var f = new Uint8Array(48);</b>
+    var f = new Uint8Array(48);
     // This is a good time to use real entropy from the system. Why didn't we
     // just use it in the first place?! Well, you should, really. Seriously,
     // just use window.crypto.getRandomValues() to get your random bytes! But
@@ -311,62 +303,61 @@ title: The ultimate md5(time())
     // Just showing the convenient place where we can inject it. If you're
     // gonna use this algorithm in real life (WHY?), please uncomment this.
     //
-    <i>// window.crypto.getRandomValues(f);</i>
-    <b>for (var i = 0; i < 256; i++) {</b>
+    // window.crypto.getRandomValues(f);
+    for (var i = 0; i < 256; i++) {
         // The extraction works like sponge: XOR into the first 32 bytes of the
         // new Gimli state the 32-byte part of each one of the 256 Gimli states
         // that we worked on. Yes, we are leaving 16 bytes of each state
         // untouched — remember the capacity thing explained earlier? The
         // untouched part is the capacity.
-        <b>for (var j = 0; j < 32; j++) {
+        for (var j = 0; j < 32; j++) {
             f[j] ^= s[i][j];
-        }</b>
+        }
         // Clear each state, which we don't need anymore, to protect against
         // leaks. (Here's hoping the compiler won't realize that s is unused.)
-        <b>for (var j = 0; j < 48; j++) {
+        for (var j = 0; j < 48; j++) {
             s[i][j] = 0;
-        }</b>
+        }
         // After absorbing 32 bytes, permute the final state.
         // Just like sponge, just like sponge.
-        <b>gimli(f);
-    }</b>
+        gimli(f);
+    }
 
     // In the end, we'll output just the first 32 bytes of the final
     // permutation, making the other 16 bytes disappear. Spo-o-o-onge!
-    <b>var out = new Uint8Array(f.subarray(0, 32));</b>
+    var out = new Uint8Array(f.subarray(0, 32));
 
     // Cleanup. You'll never guess what were the other 16 bytes.
     // (Again, if the compiler won't figure out that we don't use f anymore.
     // Otherwise our state will stay in memory for who-knows-how-long.)
-    <b>for (var i = 0; i < 48; i++) {
+    for (var i = 0; i < 48; i++) {
         f[i] = 0;
     }
     view.setFloat64(0, 0);
-    index = sum = 0;</b>
+    index = sum = 0;
 
     // We're done! The callers will get 32 hopefully unpredictable bytes.
     // We know that they are pseudorandom and uniformly distributed due to
     // Gimli. But are they unpredictable? Depends on how unpredictable the CPU
     // and memory behaved and that this algorithm correctly caught enought of
     // this unpredictability.
-    <b>return out;
-}</b>
+    return out;
+}
 
 //
 // Let's test and show how long it takes and what it returns.
 // ~25ms per jitter() on my MBP and ~100ms on my cheap smartphone.
 //
 // Create some HTML file with:
-<i>// &lt;script src="jitter.js"&gt;&lt;/script&gt;</i>
+// <script src="jitter.js"></script>
 // and open it to run this.
 //
-<b>var t1 = Date.now();
+var t1 = Date.now();
 var r = jitter();
 console.log(Date.now() - t1 + 'ms');
 var tohex = x => ("0" + (x.toString(16))).slice(-2);
 var s = Array.prototype.map.call(r, tohex).join('');
 console.log(s);
-document.body.innerHTML = Date.now() - t1 + 'ms&lt;br&gt;' + s;</b>
+document.body.innerHTML = Date.now() - t1 + 'ms<br>' + s;
 
-// You can try it here: <a href="https://dchest.org/jitter/">https://dchest.org/jitter/</a>
-</code></pre>
+// You can try it here: https://dchest.org/jitter/
