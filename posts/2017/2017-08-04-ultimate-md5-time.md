@@ -28,7 +28,7 @@ title: The ultimate md5(time())
 // permutation in sponge mode.
 //
 // A permutation is a function that reversibly changes the order of the given
-// bits; for example there exists a 4-bit permutation, that when given
+// bits; for example there exists a 4-bit permutation, which when given
 // [1, 1, 0, 0] returns [1, 0, 1, 0]. For the permutation to be permutation,
 // there should also exist a function that reverses it (that is, for our
 // example, given [1, 0, 1, 0] always returns back [1, 1, 0, 0]), although for
@@ -38,7 +38,7 @@ title: The ultimate md5(time())
 // reverse permutation. Another nice property is that it turns out if you
 // permute some bits, and then cut some bits off the result and forget them,
 // it's infeasible to get those cuts bits back unless you know the original
-// input (only if the permutation is secure, it's wide enough, and you cut
+// input (only if the permutation is secure, wide enough, and you cut
 // enough bits.) There are many other properties that a permutation must have
 // to be useful for cryptography; many cryptographers are working on creating
 // useful secure permutations, and trying to break them.
@@ -60,8 +60,8 @@ title: The ultimate md5(time())
 // 48-byte permutation, we can split it to 16-byte rate and 32-byte capacity,
 // achieving 32/2 = 16-byte = 128-bit security. Recent results showed that for
 // a keyed sponge (where you first absorb a secret key and then a message), the
-// security bound is actually min(2^capacity/message_length, 2^key_length). so
-// Gimli provides closer to 256-bit security for keyed hash (MAC, KDF, etc.).
+// security bound is actually min((2^capacity)/message_length, 2^key_length),
+// so Gimli provides closer to 256-bit security for keyed hash (MAC, KDF, etc.)
 //
 // We will use Gimli for all our cryptographic purposes.
 //
