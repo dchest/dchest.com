@@ -69,7 +69,8 @@ title: The ultimate md5(time())
 // <a href="https://gimli.cr.yp.to">https://gimli.cr.yp.to</a>
 //
 // Useful reading regarding permutations and sponges:
-// <a href="http://keccak.noekeon.org">http://keccak.noekeon.org</a>, <a href="http://sponge.noekeon.org">http://sponge.noekeon.org</a>
+// <a href="http://keccak.noekeon.org">http://keccak.noekeon.org</a>, <a href="http://sponge.noekeon.org">http://sponge.noekeon.org</a>,
+// also <a href="https://www.youtube.com/watch?v=R2tOfnUrAD8">https://www.youtube.com/watch?v=R2tOfnUrAD8</a>.
 //
 <b>function gimli(s) {
     var r, x, y, z,
