@@ -258,7 +258,7 @@ title: The ultimate md5(time())
     // that the difference in timings between loop iterations, which includes
     // permutation and memory accesses, will be encoded implicitly.
     //
-    // It also makes this algorithm secret data-dependant for memory
+    // It also makes this algorithm secret data-dependent for memory
     // accesses, which is a bad thing, and can be used for side-channel
     // attacks. Oh well. We're trading one thing for another, and it's
     // probably hard to figure out the rest of bytes from jumps.
@@ -348,7 +348,7 @@ title: The ultimate md5(time())
     // We're done! The callers will get 32 hopefully unpredictable bytes.
     // We know that they are pseudorandom and uniformly distributed due to
     // Gimli. But are they unpredictable? Depends on how unpredictable the CPU
-    // and memory behaved and that this algorithm correctly caught enought of
+    // and memory behaved and that this algorithm correctly caught enough of
     // this unpredictability.
     <b>return out;
 }</b>
