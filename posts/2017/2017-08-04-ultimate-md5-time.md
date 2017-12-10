@@ -20,7 +20,7 @@ title: The ultimate md5(time())
 </code></pre>
 <!--more-->
 <pre><code>
-// We'll start by implementing Gimli permutation: gimly() accepts
+// We'll start by implementing Gimli permutation: gimli() accepts
 // 48-byte state and permutes it in-place.
 //
 // Permutations are the foundation of many new cryptographic primitives, such
