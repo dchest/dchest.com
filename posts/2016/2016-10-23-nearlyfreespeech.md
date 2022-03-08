@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to not disregard business trends to find your niche"
+title: "How to disregard business trends to find your niche"
 ---
 
 [NearlyFreeSpeech.NET](https://www.nearlyfreespeech.net) is a sharing hosting
