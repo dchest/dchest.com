@@ -5,15 +5,11 @@ title: Archive
 
 <h2>All articles</h2>
 
-<table class="table archive">
+<table class="articles">
 {{range .Site.Posts}}
 <tr>
-  <td style="width:20%">
-    <span class="text-muted">{{.Date.Format "2006-01-02"}}</span>
-  </td>
-  <td>
-    <a href="{{.Meta.url}}">{{.Meta.title}}</a>
-  </td>
+<td class="date"><span class="text-muted">{{.Date.Format "2006.01.02"}}</span></td>
+<td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
 </tr>
 {{end}}
 </table>

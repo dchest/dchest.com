@@ -38,13 +38,13 @@ permissions for DAVDroid and *also* add it to Autostart.
 <img
  alt="Screenshot of macOS Reminders app with a Groceries list, which contains bread,
 oreos and cat food"
- src="/img/2016/reminders.png"
+ src="/img/2016/reminders.webp"
  style="max-width: 49%"
 >
 <img
  alt="Screenshot of Android OpenTasks app with a Groceries list, which contains bread,
 oreos and cat food"
- src="/img/2016/opentasks.png"
+ src="/img/2016/opentasks.webp"
  style="max-width: 49%"
 >
 
@@ -58,12 +58,12 @@ have to tap on menu &rarr; Synchronize.
 <img
  alt="Screenshot of macOS Finder with a folder open containing some files
       and green checks on their icons indicating that they are synched"
- src="/img/2016/nextcloud-macos-client.png"
+ src="/img/2016/nextcloud-macos-client.webp"
  style="max-width: 49%"
 >
 <img
  alt="Screenshot of Nextcloud for Android a folder open containing some files"
- src="/img/2016/nextcloud-android-client.png"
+ src="/img/2016/nextcloud-android-client.webp"
  style="max-width: 49%"
 >
 
@@ -87,27 +87,27 @@ apps rather than fancy. Writeily Pro, on the other hand, has a quite nice UI.
 
 <img
  alt="Screenshot of QOwnNotes"
- src="/img/2016/qownnotes.png"
+ src="/img/2016/qownnotes.webp"
  style="max-width: 97%"
 >
 
 <img
  alt="Screenshot of Writeily Pro folders view"
- src="/img/2016/writeily-folders.png"
+ src="/img/2016/writeily-folders.webp"
  style="max-width: 32%; border: 1px solid #eee"
 >
 <img
  alt="Screenshot of a note open in Writeily Pro's Markdown preview"
- src="/img/2016/writeily-preview.png"
+ src="/img/2016/writeily-preview.webp"
  style="max-width: 32%; border: 1px solid #eee"
 >
 <img
  alt="Screenshot of Writeily Pro note editor"
- src="/img/2016/writeily-editing.png"
+ src="/img/2016/writeily-editing.webp"
  style="max-width: 32%; border: 1px solid #eee"
 >
 
-**Update (2016-12-03):** QOwnNotes froze while I was typing a huge note, and if
+QOwnNotes froze while I was typing a huge note, and if
 not for my carefulness, I'd have lost it. Bugs happen, but I no longer trust
 this program and won't use or recommend it. Instead, for now I'll just stick
 with editing plain text notes with build-in editor in Nextcloud's web interface
@@ -121,3 +121,8 @@ but it works quite okay and unlike Google's or Apple's "clouds" didn't eat my
 data yet. I may update this post in the future as I use this setup more. If you
 have comments or suggestions, please contact me on Twitter —
 [@dchest](https://twitter.com/dchest) or by [email](/about/).
+
+## P.S. Why you should not do it
+
+Running your own Nextcloud instance is time-consuming: frequent updates require your constant attention, you’ll have to keep your server patched all the time, etc. It’s a full-time job, and it’s not worth your time. In fact, if we close our eyes on privacy or lock-in implications, running your own Nextcloud instance is a bad idea from the security point of view. You just can’t be as good as Google’s or Apple’s security team. Do you get notified about vulnerabilities in your server’s operating system before attackers have a chance to exploit them? Are you willing to wake up at 3am and spend your night and day patching servers? Unlikely. I do not recommend running your own Nextcloud instance if you want its contents to be safe and secure.
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mac developers: Use AQDataExtensions with caution"
+title: "Mac developers: don't use AQDataExtensions"
 ---
 
 [AQDataExtensions][AQDataExtensions] is an `NSData` category developed in 2005 by Lucas Newman

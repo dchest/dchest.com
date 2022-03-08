@@ -1,6 +1,6 @@
 name: dchest.org
 author: "Dmitry Chestnykh"
-permalink: /:name/
+permalink: /:year/:month/:day/:name/
 url: https://dchest.org
 #search_index: /search/data/search-index.js
 
