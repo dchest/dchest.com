@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to not give a fuck about business trends to find your niche"
+title: "How to not disregard business trends to find your niche"
 ---
 
 [NearlyFreeSpeech.NET](https://www.nearlyfreespeech.net) is a sharing hosting
@@ -48,10 +48,10 @@ Being frugal and having a simple business model:
 > It's not easy. For one thing, we keep overhead to a minimum. No fancy
 > multi-acre Silicon Valley office palaces with slides and wandering masseurs
 > here. No business development teams. No commission-driven sales force.
-> 
+>
 > Also, we try to avoid doing stupid things that make no sense just because we
 > heard someone else made a lot of money that way. That really helps.
-> 
+>
 > This is not a loss leader, a limited time offer, or restricted to only
 > certain people. This is our business model, and it works.
 
@@ -75,7 +75,7 @@ Avoiding fancy marketing terms:
 > [Is this cloud computing?](https://www.nearlyfreespeech.net/about/faq#Cloud)
 >
 > No. Clouds are fluffy. We are not fluffy!
-> 
+>
 > We have been using "cloud-like" principles since we started in 2002. We make
 > heavy use of multiple virtualization technologies, hardware independence,
 > shared resource pooling, load balancing and clustered job distribution. But
