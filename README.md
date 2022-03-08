@@ -1,7 +1,7 @@
-dchest.org
+dchest.com
 ==========
 
-This is a source code for my blog <https://dchest.org>.
+This is a source code for my blog <https://dchest.com>.
 If you found a mistake or a typo, feel free to submit a pull request.
 
 The site is built with [kkr](https://github.com/dchest/kkr).

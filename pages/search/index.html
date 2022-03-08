@@ -1,0 +1,188 @@
+---
+layout: page
+title: Search
+---
+<style>
+    :root {
+        --bg: #fff;
+        --accent-bg: #f5f7ff;
+        --text: #212121;
+        --text-light: #585858;
+        --border: #d8dae1;
+        --accent: #0d47a1;
+        --code: #d81b60;
+        --preformatted: #444;
+        --marked: #ffdd33;
+        --disabled: #efefef;
+
+    }
+
+    .search {
+        margin-top: 20px;
+    }
+
+    #kkr-search-results {
+        font-family: var(--f-sans);
+        padding-left: 0;
+        list-style: none;
+    }
+
+    li:first-child.search-result {
+        padding-top: 20px;
+    }
+
+    li.search-result {
+        padding-bottom: 12px;
+    }
+
+    #kkr-search-results.not-found {
+        color: #777;
+        margin-bottom: 12px;
+        padding-top: 20px;
+    }
+
+    .kkr-search-result-title {
+        font-size: 18px;
+    }
+
+    a.kkr-search-result-url {
+        color: rgb(72, 121, 80);
+        font-size: 14px;
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
+
+    .kkr-search-result-page-link {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px 15px;
+    }
+
+    .active .kkr-search-result-page-link {
+        border: none;
+        text-decoration: none;
+        color: #777;
+    }
+
+    /* from https://github.com/kevquirk/simple.css/blob/main/simple.css */
+    button,
+    [role="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+        border: none;
+        border-radius: 5px;
+        background: var(--accent);
+        font-size: 1rem;
+        color: #fff;
+        padding: 0.7rem 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    button[disabled],
+    [role="button"][aria-disabled="true"],
+    input[type="submit"][disabled],
+    input[type="reset"][disabled],
+    input[type="button"][disabled],
+    input[type="checkbox"][disabled],
+    input[type="radio"][disabled],
+    select[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+        cursor: not-allowed;
+        background-color: var(--disabled);
+    }
+
+    input[type="range"] {
+        padding: 0;
+    }
+
+    button:focus,
+    button:enabled:hover,
+    [role="button"]:focus,
+    [role="button"]:not([aria-disabled="true"]):hover,
+    input[type="submit"]:focus,
+    input[type="submit"]:enabled:hover,
+    input[type="reset"]:focus,
+    input[type="reset"]:enabled:hover,
+    input[type="button"]:focus,
+    input[type="button"]:enabled:hover {
+        filter: brightness(1.4);
+        cursor: pointer;
+    }
+
+    textarea,
+    select,
+    input {
+        font-size: inherit;
+        font-family: inherit;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text);
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        box-shadow: none;
+        box-sizing: border-box;
+        width: 60%;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Add arrow to drop-down */
+    select {
+        background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
+            linear-gradient(135deg, var(--text) 51%, transparent 49%);
+        background-position: calc(100% - 20px), calc(100% - 15px);
+        background-size: 5px 5px, 5px 5px;
+        background-repeat: no-repeat;
+    }
+
+    select[multiple] {
+        background-image: none !important;
+    }
+
+    /* checkbox and radio button style */
+    input[type="checkbox"],
+    input[type="radio"] {
+        vertical-align: bottom;
+        position: relative;
+    }
+</style>
+<div class="search">
+    <div class="search-component">
+        <div class="input-group">
+            <input type="search" id="kkr-search-input" class="form-control" autofocus>
+            <button id="kkr-search-button" class="btn btn-primary" aria-label="Search">Search</button>
+        </div>
+
+        <ul id="kkr-search-results" data-results-per-page="10" data-clean-title="- {{.Site.Name}}$"
+            data-not-found="Nothing found">
+        </ul>
+
+        <template id="kkr-search-result-item">
+            <li class="search-result">
+                <div><a class="kkr-search-result-title kkr-search-result-href"></a></div>
+                <div><a class="kkr-search-result-url kkr-search-result-href"></a></div>
+            </li>
+        </template>
+
+        <template id="kkr-search-result-pagination">
+            <div class="pagination">
+                <span class="kkr-search-result-page-item page-item">
+                    <a class="kkr-search-result-page-link page-link" href="#"></a>
+                </span>
+            </div>
+        </template>
+    </div>
+
+</div>
+<script>{{asset "search-script" }}</script>

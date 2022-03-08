@@ -1,0 +1,352 @@
+---
+layout: default
+title: Password authentication for web and mobile apps
+seo_title: Password authentication for web and mobile apps (book)
+book_css: true
+---
+<main class="book">
+    <header class="book">
+        <h1>Password authentication for web <span class="amp">and</span> mobile apps</h1>
+
+        <p class="lead">
+            Authenticating users with passwords is a fundamental part of web and mobile security.
+            It is also the part that's easy to get wrong.
+        </p>
+    </header>
+    <main class="book">
+
+        <div class="intro">
+            <div>
+                <img src="/img/authbook/auth-book3d.webp" class="book3d" alt="Password authentication for web and mobile apps - Book cover">
+            </div>
+
+            <div>
+                <p class="intro-lead">
+                    This book is for developers who want to learn how to implement password authentication correctly and
+                    securely.
+                </p>
+                <p>It answers many questions that everyone has when writing their own authentication system or learning
+                    a framework that implements it.</p>
+
+                <!-- <p>You will learn how to:</p> -->
+
+                <h3>Store passwords securely</h3>
+                <ul>
+                    <li>What is the best password hashing function for your app?</li>
+                    <li>How many bytes of salt should you use?</li>
+                    <li>What is the optimal password hash length?</li>
+                    <li>How to encode and store hashes?</li>
+                    <li>When to pepper and encrypt hashes and how to do it securely?</li>
+                    <li>How to avoid vulnerabilities in bcrypt, PBKDF2, and scrypt, and which Argon2 version to use?
+                    </li>
+                    <li>How to update password hashes to keep up with Moore’s law?</li>
+                    <li>How to enforce password quality?</li>
+                </ul>
+
+                <h3>Remember users</h3>
+                <ul>
+                    <li>How to implement secure sessions that are not vulnerable to timing attacks and database leaks?</li>
+                    <li>Why is it a bad idea to use JWT and signed cookies for sessions?</li>
+                    <li>How to allow users to view and revoke sessions from other devices?</li>
+                </ul>
+
+                <h3>Verify usernames and email addresses</h3>
+                <ul>
+                    <li>How to verify email addresses and why is it important? How Skype failed to do it and got hacked.</li>
+                    <li>How to avoid vulnerabilities caused by Unicode?</li>
+                    <li>How to disallow profanities and reserved words in usernames?</li>
+                </ul>
+                <h3>Add multi-factor authentication</h3>
+                <ul>
+                    <li>How to implement two-factor authentication with TOTP and WebAuthn/U2F security keys?</li>
+                    <li>How to generate recovery codes? How long should they be?</li>
+                    <li>How to rate limit 2FA and why not doing it breaks everything?</li>
+                </ul>
+                <h3>Also…</h3>
+                <ul>
+                    <li>How to create accessible registration and log in forms?</li>
+                    <li>How to use cryptography to improve security? When to avoid it?</li>
+                    <li>How to generate random strings that are free from modulo bias?</li>
+                </ul>
+            </div>
+
+        </div>
+        <!--.intro-->
+
+        <p class="internote">
+            The book applies to any programming language: it explains concepts and algorithms in English and
+            provides references to relevant libraries for popular programming languages.</b>
+        </p>
+
+        <h2 class="contents-header">Contents</h2>
+        <div class="contents">
+            <div class="chapter" id="ch-introduction">
+                <ul>
+                    <li>Introduction</li>
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch0-basics">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-info">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Basics
+                </h3>
+                <ul>
+                    <li>Cryptography
+                    <li>Randomness
+                        <ul>
+                            <li>Modulo bias
+                        </ul>
+                    <li>UUID
+                    <li>Constant-time comparison
+                    <li>CSRF protection
+                    <li>Audit logging and reporting
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch2-users">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-users">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Users
+                </h3>
+                <ul>
+                    <li>Usernames vs email addresses
+                    <li>Filtering usernames
+                    <li>Validating email addresses
+                    <li>Confirming email addresses
+                    <li>Universal confirmation system
+                    <li>Changing usernames
+                    <li>Changing email addresses
+                    <li>Requiring re-authentication
+                    <li>Unicode issues
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch3-passwords">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-key">
+                        <path
+                            d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                        </path>
+                    </svg>
+                    Passwords
+                </h3>
+                <ul>
+                    <li>Password quality control
+                    <li>Characters and emoji in passwords
+                    <li>Password hashing
+                        <ul>
+                            <li>PBKDF2
+                            <li>bcrypt
+                            <li>scrypt
+                            <li>yescrypt
+                            <li>Argon2
+                        </ul>
+                    <li>Goodbye, rainbow tables
+                    <li>Prehashing for scrypt and bcrypt
+                    <li>Peppering and encrypting hashes
+                    <li>Hash length
+                    <li>Encoding and storing password hashes
+                    <li>Hash upgrades
+                    <li>Client-side password prehashing
+                    <li>Resetting passwords
+                    <li>Changing passwords
+                    <li>Against enforced password rotation
+                    <li>Secret questions
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch4-mfa">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-smartphone">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                    Multi-factor authentication
+                </h3>
+                <ul>
+                    <li>What is multi-factor authentication?
+                    <li>Two-step or two-factor?
+                    <li>Rate limiting
+                    <li>TOTP
+                    <li>SMS
+                    <li>Security keys: U2F, WebAuthn
+                        <ul>
+                            <li>Registration
+                            <li>Authentication
+                            <li>Resources
+                        </ul>
+                    <li>Recovery codes
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch5-sessions">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-database">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                    Sessions
+                </h3>
+                <ul>
+                    <li>JWT and signed cookies for sessions?
+                    <li>Client-side session data
+                        <ul>
+                            <li>Signed cookies
+                            <li>Encrypted cookies
+                        </ul>
+                    <li>Sessions list
+                    <li>Revoking sessions
+                    <li>Logging out
+                    <li>Server-side storage of sessions
+                    <li>Client-side storage of session tokens
+                        <ul>
+                            <li>Web apps
+                            <li>Mobile apps
+                        </ul>
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch6-usability">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-smile">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                    </svg>
+                    Usability and accessibility
+                </h3>
+                <ul>
+                    <li>Registration form
+                    <li>Sign in form
+                </ul>
+            </div>
+
+            <div class="chapter" id="ch-introduction">
+                <br>
+                <ul>
+                    <li>Afterword</li>
+                    <li>About the author</li>
+                    <li>Index</li>
+                </ul>
+            </div>
+
+
+            <div class="chapter author">
+                <h2>About the author</h2>
+                <!-- <img src="/img/dchest-website.webp" alt="Dmitry Chestnykh" width="100" style="float: left; margin-top: 5px; margin-right: 20px; margin-bottom: 30px; margin-left: -30px; border-radius: 20px; shape-outside: circle()"> -->
+                <p>Hi! I’m <i>Dmitry Chestnykh</i>. I've been writing software for over twenty years.
+                    I consult on applied cryptography and software security. I was a member of the <i>Password Hashing
+                        Competition</i>
+                    experts panel. I discovered and helped fix numerous vulnerabilities in commercial and open source
+                    apps.
+                    You
+                    can
+                    find my code and documentation in Go and Python standard libraries. I wrote popular open source
+                    cryptography
+                    packages in JavaScript, Python, and Go.
+                </p>
+            </div>
+
+
+        </div>
+
+        <h2>Buy e-book directly from me</h2>
+
+        <div class="buy">
+            <p class="threat">Get <span class="book-title">Password authentication for web and mobile apps</span> for
+                the introductory price
+                before I raise it!</p>
+            <hr>
+            <div class="row">
+                <div class="column">
+                    <!-- <h2>Get it now!</h2> -->
+                    <p class="format">
+                        <b>130-page e-book</b><br>Formats included <span style="color:#777">(all DRM-free)</span>:
+                    </p>
+                    <ul>
+                        <li>PDF</li>
+                        <li>ePub (PC, Mac, iPhone, iPad, Android)</li>
+                        <li>mobi (Kindle)</li>
+                    </ul>
+                </div>
+                <div class="column button-column">
+                    <p class="price">Your Price: &nbsp; <b>$29.99</b></p>
+                    <p>
+                        <a href="https://sites.fastspring.com/codingrobots/instant/authbook" class="buy-button">Buy now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Buy paperback or e-book from retailers</h2>
+
+        <div class="buy retailers">
+            <div class="row" style="margin-top: 30px">
+                <div class="column amazon">
+                    <p>
+                    <a href="https://amzn.to/3cgUFxk"><img class="retailer-logo" src="/img/authbook/amazon.svg" alt="Amazon"></a>
+                    </p>
+                    <p><b>Paperback</b> or <b>Kindle</b></p>
+                    <div class="amazon-countries">
+                    <a href="https://amzn.to/3cgUFxk">United&nbsp;States</a><br>
+                    <a href="https://amzn.to/2Xaw2ya">United&nbsp;Kingdom</a><br>
+                    <a href="https://amzn.to/2Agr1ez">Canada</a><br>
+                    <a href="https://www.amazon.com.au/dp/B089B3CG6W">Australia</a><br>
+                    <a href="https://www.amazon.in/dp/B089B3CG6W">India</a><br>
+                    <a href="https://amzn.to/2ZNw14N">Germany</a><br>
+                    <a href="https://amzn.to/2XK9Eed">France</a><br>
+                    <a href="https://amzn.to/2ZPAJ26">Spain</a><br>
+                    <a href="https://amzn.to/2TKs1hR">Italy</a><br>
+                    <a href="https://www.amazon.nl/dp/B089B3CG6W">Netherlands</a><br>
+                    <a href="https://www.amazon.co.jp/dp/B089B3CG6W">Japan</a><br>
+                    <a href="https://www.amazon.com.br/dp/B089B3CG6W">Brazil</a><br>
+                    <a href="https://www.amazon.com.mx/dp/B089B3CG6W">Mexico</a><br>
+                    <span style="color:#ddd">—</span><br>
+                    <a href="https://amzn.to/3cgUFxk"><i>Other...</i></a><br>
+                </div>
+                </div>
+                <div class="column kobo">
+                    <p><a href="https://www.kobo.com/ww/en/ebook/password-authentication-for-web-and-mobile-apps"><img class="retailer-logo" src="/img/authbook/kobo.svg" alt="Kobo"></a>
+                    <br>
+                    ePub<br>
+                    <a href="https://www.kobo.com/ww/en/ebook/password-authentication-for-web-and-mobile-apps">Buy from Kobo</a></p>
+
+                    <hr style="margin: 40px">
+
+                    <p><a href="https://www.barnesandnoble.com/w/password-authentication-for-web-and-mobile-apps-dmitry-chestnykh/1137394594?ean=9798649303095"><img class="retailer-logo" src="/img/authbook/bn.svg" alt="Kobo"></a>
+                    <br>
+                    Paperback<br>
+                    <a href="https://www.barnesandnoble.com/w/password-authentication-for-web-and-mobile-apps-dmitry-chestnykh/1137394594?ean=9798649303095">Buy from B&amp;N</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            Amazon, Rakuten Kobo, and Barnes &amp; Noble are trademarks of their respective companies.<br>
+            Some Amazon links are affiliate links. Cats were involved in the production of this book.
+        </div>
+    </main>

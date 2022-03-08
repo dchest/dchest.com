@@ -1,36 +1,67 @@
 ---
 layout: blog
-title: dchest.org
-seo_title: dchest.org
+title: dchest.com
+seo_title: dchest.com
 description: Dmitry Chestnykh's blog about tools, online business, technology, programming, and life.
 ---
+<style>
+.homebook {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 20px;
+  margin-left: -15px;
+}
+.homebook-desc {
+  align-self: center;
+  max-width: 600px;
+}
+.homebook-img {
+  max-width: 150px;
+}
+@media (max-width: 767px) {
+  .homebook {
+    margin-left: 0;
+  }
+  .homebook-img {
+    max-width: 60px;
+  }
+  .homebook-desc {
+    align-self: stretch;
+    max-width: 100%;
+  }
+  .homebook-desc h3 {
+    margin-top: 0;
+  }
+}
+</style>
 
-{{range .Site.Posts.Limit 10}}
-<article class="post">
-  <header>
-    <h2 class="post-title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></h2>
-  </header>
+<h2>Books</h2>
 
-  {{if .ShortContent}}
-    <div class="post-content">
-      {{.ShortContent}}
-    </div>
-    <p><a class="post-more-link" href="{{.URL}}#more">Continue reading »</a></p>
-  {{else}}
-    <div class="post-content">
-      {{.Content}}
-    </div>
-  {{end}}
+<div class="homebook">
+  <div>
+    <a href="/authbook/"><img class="homebook-img" src="/img/authbook/auth-book-small.webp" alt="Password authentication for web and mobile apps - Book cover"></a>
   </div>
+  <div class="homebook-desc">
+    <h3><a href="/authbook/">Password Authentication for Web and Mobile Apps</a></h3>
+    <p>
+      Learn how to securely authenticate users,
+      how to hash and store passwords, use sessions and tokens,
+      prevent common attacks, and more.
+    </p>
+    <p><a href="/authbook/">Get the book <svg style="vertical-align: text-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg></a></p>
 
-  <footer class="post-meta">
-    <div class="post-date">
-      <a href="{{.Meta.url}}">{{.Date.Format "02 January 2006"}}</a>
-    </div>
-  </footer>
-</article>
+  </div>
+</div>
+
+<h2>Articles</h2>
+
+<table class="articles" data-kkr-search="noindex">
+{{range .Site.Posts}}
+<tr>
+<td class="date">{{.Date.Format "Jan 02, 2006"}}</td>
+<td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
+</tr>
 {{end}}
-
-<footer class="blog-footer">
-  <a href="/archive/" class="btn btn-o">All articles</a>
-</footer>
+</table>

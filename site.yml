@@ -1,14 +1,18 @@
-name: dchest.org
+name: dchest.com
 author: "Dmitry Chestnykh"
 permalink: /:year/:month/:day/:name/
-url: https://dchest.org
-#search_index: /search/data/search-index.js
+url: https://dchest.com
+search:
+  index: /search/data/search-index.json
+  exclude:
+      - /404.html
+      - /search/
 
 filters:
   .html: [htmlmin, scripts, styles]
 
 properties:
-  like_title: "dchest.org"
+  like_title: "dchest.com"
   twitter_name: dchest
   urls:
     twitter: https://twitter.com/dchest

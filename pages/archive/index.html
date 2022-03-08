@@ -5,11 +5,15 @@ title: Archive
 
 <h2>All articles</h2>
 
-<table class="articles">
+<table class="articles" data-kkr-search="noindex">
 {{range .Site.Posts}}
 <tr>
-<td class="date"><span class="text-muted">{{.Date.Format "2006.01.02"}}</span></td>
+<td class="date"><span class="text-muted">{{.Date.Format "2006-01-02"}}</span></td>
 <td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
 </tr>
 {{end}}
 </table>
+
+<br>
+
+<a href="/search/">Search...</a>

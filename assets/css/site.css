@@ -1,3 +1,9 @@
+:root {
+  --f-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --f-mono: Consolas, "Roboto Mono", "Liberation Mono", Menlo, "DejaVu Sans Mono", Courier, monospace;
+  --f-serif: Georgia, 'Times New Roman', Times, serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +14,7 @@ body {
 }
 
 body, textarea, input, select {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: var(--f-sans);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -24,7 +30,7 @@ a:hover {
 }
 
 code {
-  font: 13px Consolas, "Roboto Mono", "Liberation Mono", Menlo, "DejaVu Sans Mono", Courier, monospace;
+  font: 13px var(--f-mono);
   color: #333;
   background-color: transparent;
   padding: 0;
@@ -64,13 +70,17 @@ main,
 
 /* Masthead */
 
+
 #mh {
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.02);
 }
 
 #mh > nav {
   position: relative;
-  padding: 5px 15px;
+  padding: 5px;
 }
 
 #mh h1 {
@@ -78,7 +88,12 @@ main,
   display: block;
   font-size: 18px;
   line-height: 1;
-  margin: 9px 20px 0 0;
+  margin: 0 20px 0 0;
+}
+
+#mh .logo {
+  width: 54px;
+  height: 64px;
 }
 
 #mh h1 a:link,
@@ -95,7 +110,7 @@ main,
 
 #mh ul {
   list-style: none;
-  margin: 0 0 0 120px;
+  margin: 0 0 0 80px;
   padding: 5px;
 }
 
@@ -108,6 +123,7 @@ main,
 #mf {
   font-size: 14px;
   clear: both;
+  margin-bottom: 10px;
 }
 
 a.feed {
@@ -129,7 +145,7 @@ a.feed.json {
 
 .post-content,
 .page-content {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--f-serif);
   font-size: 17px;
   line-height: 1.5;
 }
@@ -177,12 +193,12 @@ a.feed.json {
 
 .post-meta {
   font-size: 14px;
-  color: #aaa;
+  color: #777;
   margin-top: 8px;
 }
 
 .post-date a {
-  color: #aaa;
+  color: #777;
   text-decoration: none;
 }
 
@@ -226,8 +242,14 @@ figcaption {
 }
 
 .articles .date {
-  font-variant-numeric: tabular-nums;
+  /* font-variant-numeric: tabular-nums; */
+  font-size: 13px;
+  font-family: var(--f-mono);
+  text-align: right;
   color: rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding-top: 4px;
 }
 
 .articles .title {

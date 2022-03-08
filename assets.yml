@@ -4,3 +4,9 @@
     - assets/css/site.css
   filter: cssmin
   outname: $
+
+- name: book-css
+  files:
+    - assets/css/book.css
+  filter: cssmin
+  outname: $
