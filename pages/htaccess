@@ -31,6 +31,10 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.dchest\.com [NC]
 RewriteRule ^(.*)$ https://dchest.com/$1 [L,R=301]
 
+# Redirect dchest.org to dchest.com
+RewriteCond %{HTTP_HOST} ^(www\.)*dchest\.org [NC]
+RewriteRule ^(.*)$ https://dchest.com/$1 [L,R=301]
+
 # Security headers
 Header always set X-Frame-Options "SAMEORIGIN"
 Header always set X-XSS-Protection "1; mode=block"
