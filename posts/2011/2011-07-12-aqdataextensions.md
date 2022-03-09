@@ -4,7 +4,7 @@ title: "Mac developers: don't use AQDataExtensions"
 tags: Cryptography, Programming
 ---
 
-[AQDataExtensions][AQDataExtensions] is an `NSData` category developed in 2005
+`AQDataExtensions` is an `NSData` category developed in 2005
 and distributed with [AquaticPrime][AquaticPrime] framework which "allows for easily encrypting
 and decrypting NSData objects with AES/Rijndael (i.e. the Advanced Encryption
 Standard)".
@@ -73,8 +73,7 @@ is reseeded for each encryption with current time. You should replace this code
 with `RAND_bytes(iv, 16)` from `openssl/rand.h`.
 
 
-[AQDataExtensions]: http://aquaticmac.com/cocoa.php
-[AquaticPrime]: http://aquaticmac.com/
+[AquaticPrime]: https://web.archive.org/web/20110210065530/http://aquaticmac.com/
 [PBKDF2]: http://en.wikipedia.org/wiki/PBKDF2
 [scrypt]: http://www.tarsnap.com/scrypt.html
 [HMAC]: http://en.wikipedia.org/wiki/HMAC
