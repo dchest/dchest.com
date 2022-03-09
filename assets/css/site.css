@@ -255,3 +255,9 @@ figcaption {
 .articles .title {
   padding-left: 10px;
 }
+
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -4px;
+}
