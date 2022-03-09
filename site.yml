@@ -2,6 +2,11 @@ name: dchest.com
 author: "Dmitry Chestnykh"
 permalink: /:year/:month/:day/:name/
 url: https://dchest.com
+
+tagindex:
+  permalink: /tags/:lctag/
+  layout: tag
+
 search:
   index: /search/data/search-index.json
   exclude:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Copywriting gems from a hundred-year-old Sears catalog
+tags: Business, Copywriting
 ---
 
 ![Sears Tower](/img/2019/sears-intro.webp)

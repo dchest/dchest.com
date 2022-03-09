@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why password peppering in Devise library for Rails is not secure
+tags: Security, Cryptography, Programming
 ---
 
 ![Pepper](/img/2020/pepper.webp)

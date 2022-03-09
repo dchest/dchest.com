@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Synching Android and macOS with Nextcloud
+tags: Software
 ---
 
 > Google and Microsoft are further along on the technology, but haven't quite

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Improving storage of password-encrypted secrets in end-to-end encrypted apps
+tags: Security, Cryptography, Programming
 ---
 
 Many apps with client-side encryption that use passwords derive both encryption and server authentication keys from them.

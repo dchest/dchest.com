@@ -72,3 +72,11 @@ description: Dmitry Chestnykh's blog about tools, online business, technology, p
 </tr>
 {{end}}
 </table>
+
+<h3>Tags</h3>
+<p data-kkr-search="noindex">
+{{range $index, $tag := .Site.TagList}}
+<a href="{{$.Site.TagURL $tag}}">{{$tag}}</a>{{if lt $index (lastindex $.Site.TagList)}} &#183; {{end}}
+{{end}}
+</p>
+

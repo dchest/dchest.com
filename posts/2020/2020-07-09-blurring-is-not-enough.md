@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blurring is not enough
+tags: Security
 ---
 
 You’ve probably heard of [that thing](https://colab.research.google.com/github/tg-bomze/Face-Depixelizer/blob/master/Face_Depixelizer_Eng.ipynb) that restored (well, tried to restore) pixelated images.

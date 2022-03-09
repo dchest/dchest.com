@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My book on password authentication is out
+tags: Books, Programming, Security, Cryptography
 ---
 
 ![Password authentication for web and mobile apps book: PDF on iPad and mobi on Kindle](/img/2020/authbook-readers-painting.webp)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Does salt need to be random for password hashing?
+tags: Security, Cryptography
 ---
 
 

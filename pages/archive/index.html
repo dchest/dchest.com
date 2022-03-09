@@ -3,6 +3,13 @@ layout: blog
 title: Archive
 ---
 
+<h2>Tags</h2>
+<div data-kkr-search="noindex"></div>
+{{range $index, $tag := .Site.TagList}}
+<a href="{{$.Site.TagURL $tag}}">{{$tag}}</a>{{if lt $index (lastindex $.Site.TagList)}} &#183; {{end}}
+{{end}}
+</div>
+
 <h2>All articles</h2>
 
 {{range .Site.Posts.ByYear}}

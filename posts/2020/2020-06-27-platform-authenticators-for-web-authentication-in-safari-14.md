@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Platform authenticators for Web Authentication in Safari 14
+tags: Security, Software
 ---
 
 [Safari 14 will support](https://developer.apple.com/documentation/safari-release-notes/safari-14-beta-release-notes) platform authenticators for [Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API) (also known as WebAuthn). Current versions of Safari already support WebAuthn for security keys, such as [YubiKey](https://www.yubico.com), which are called _roaming authenticators_, but soon you will be able to authenticate using Touch or Face ID on supported devices without any external keys; this is called a _platform authenticator_.

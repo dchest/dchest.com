@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to use Chrome securely
+tags: Security, Software
 ---
 
 1. Install [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) extension. (If you’re not from US, check its options to turn on ad block lists for your country)

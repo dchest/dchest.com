@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Securing Go web applications
+tags: Security, Go, Programming
 ---
 
 There are lots of security-related things to keep in mind when writing a web application, as the Web is a place full of danger: cross-site scripting (XSS), cross-site request forgery (CSRF), clickjacking, brute forcing, spam and so on.
