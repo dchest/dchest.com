@@ -1,23 +1,28 @@
 ---
-layout: default
+layout: page
 title: Page not found
 ---
-<div style="max-width: 740px">
-
-<h2>Page not found.</h2>
 
 <p>
   Unfortunately, the page you've requested has not been
-  found on our server. Most likely it disappeared due to
+  found on my server. Most likely it disappeared due to
   my error. Please let me know about that by sending a message to
 <a href="mailto:dmitry@codingrobots.com">dmitry@codingrobots.com</a>.
 Thanks!</p>
 
-<a href="/">Go to home page</a>
+<h2>Try search</h2>
+<form method="get" action="/search/">
+  <input type="search" name="query">
+  <input type="submit" value="Search">
+</form>
+
+<p><a href="/"><svg style="vertical-align: text-bottom" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="15 18 9 12 15 6"></polyline>
+</svg> Go to home page</a></p>
 
 <h3>Latest articles</h3>
 <ul>
-  {{range .Site.Posts.Limit 10}}
+  {{range .Site.Posts.Limit 5}}
   <li><a href="{{.Meta.url}}">{{.Meta.title}}</a></li>
   {{end}}
   <li><a href="/archive/"><b>All articles</b></a></li>
