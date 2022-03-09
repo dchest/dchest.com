@@ -20,6 +20,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > nated string is encrypted and both the 12-bit random
 > quantity (called the salt) and the 64-bit result of the
 > encryption are entered into the password file.
+>
 > When the user later logs in to the system, the 12-bit
 > quantity is extracted from the password file and appended
 > to the typed password. The encrypted result is
@@ -32,6 +33,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > for this is that there are 4,096 encrypted versions of each
 > password and one of them has been picked more or less
 > at random by the system.
+>
 > With this modification, it is likely that the bad guy
 > can spend days of computer time trying to find a pass.
 > word on a system with hundreds of passwords, and find
@@ -39,6 +41,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > impractical to prepare an encrypted dictionary in advance.
 > Such an encrypted dictionary could be used to
 > crack new passwords in milliseconds when they appear.
+>
 > There is a (not inadvertent) side effect of this modifiction.
 > It becomes nearly impossible to find out whether
 > a person with passwords on two or more systems has
