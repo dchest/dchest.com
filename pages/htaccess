@@ -54,10 +54,6 @@ AddType application/x-font-ttf           .ttf
 AddType application/font-woff            .woff
 AddType application/font-woff2           .woff2
 
-# Enable gzip compression
-SetOutputFilter DEFLATE
-AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text/css application/x-javascript
-
 # Set far future expiration
 ExpiresActive On
 ExpiresByType text/javascript "access plus 1 years"
@@ -71,8 +67,97 @@ ExpiresByType application/x-font-ttf "access plus 1 years"
 ExpiresByType application/font-woff "access plus 1 years"
 ExpiresByType application/font-woff2 "access plus 1 years"
 
-# Cache-control for html
-#<FilesMatch "\.(xml|txt|html|htm)$">
-# 2 HOURS
-#Header set Cache-Control "max-age=7200"
-#</FilesMatch>
+# -------------------
+# Static compression
+# -------------------
+RewriteBase /
+
+# Ignore .br & .gz files in directory indexes
+IndexIgnore *.br *.gz
+
+# AddEncoding allows you to have certain browsers uncompress information on the fly.
+AddEncoding gzip .gz
+AddEncoding br .br
+
+# Serve compressed .html files if they exist and the client accepts gzip or br.
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.html$ $1\.html\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.html$ $1\.html\.gz [QSA]
+
+# Same with .css
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.css$ $1\.css\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.css$ $1\.css\.gz [QSA]
+
+# Same with .js
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.js$ $1\.js\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.js$ $1\.js\.gz [QSA]
+
+# Same with .json
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.json$ $1\.json\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.json$ $1\.json\.gz [QSA]
+
+# Same with .xml
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.xml$ $1\.xml\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.xml$ $1\.xml\.gz [QSA]
+
+# Same with .svg
+RewriteCond %{HTTP:Accept-encoding} br
+RewriteCond %{REQUEST_FILENAME}\.br -s
+RewriteRule ^(.*)\.svg$ $1\.svg\.br [QSA]
+
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.svg$ $1\.svg\.gz [QSA]
+
+# Serve correct content types, and prevent mod_deflate double gzip.
+RewriteRule \.html\.gz$ - [T=text/html,E=no-gzip]
+RewriteRule \.html\.br$ - [T=text/html,E=no-brotli,E=no-gzip]
+RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip]
+RewriteRule \.css\.br$ - [T=text/css,E=no-brotli,E=no-gzip]
+RewriteRule \.js\.gz$ - [T=application/javascript,E=no-gzip]
+RewriteRule \.js\.br$ - [T=application/javascript,E=no-brotli,E=no-gzip]
+RewriteRule \.json\.gz$ - [T=application/json,E=no-gzip]
+RewriteRule \.json\.br$ - [T=application/json,E=no-brotli,E=no-gzip]
+RewriteRule \.xml\.gz$ - [T=application/xml,E=no-gzip]
+RewriteRule \.xml\.br$ - [T=application/xml,E=no-brotli,E=no-gzip]
+RewriteRule \.svg\.gz$ - [T=image/svg+xml,E=no-gzip]
+RewriteRule \.svg\.br$ - [T=image/svg+xml,E=no-brotli,E=no-gzip]
+
+<FilesMatch "\.(html|css|js|json|xml|svg)\.gz$">
+    # Serve correct encoding type
+    Header set Content-Encoding gzip
+    # Force proxies to cache gzip & non-gzip files separately
+    Header append Vary Accept-Encoding
+</FilesMatch>
+<FilesMatch "\.(html|css|js|json|xml|svg)\.br$">
+    # Prevent mime module to set brazilian language header (because the file ends with .br)
+    RemoveLanguage .br
+    # Set the correct encoding type
+    Header set Content-Encoding br
+    # Force proxies to cache brotli & non-brotli files separately
+    Header append Vary Accept-Encoding
+</FilesMatch>

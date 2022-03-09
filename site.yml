@@ -16,3 +16,16 @@ properties:
   twitter_name: dchest
   urls:
     twitter: https://twitter.com/dchest
+
+compress:
+  methods:
+    - gzip
+    - br
+  extensions:
+    - txt
+    - html
+    - js
+    - css
+    - xml
+    - json
+    - svg
