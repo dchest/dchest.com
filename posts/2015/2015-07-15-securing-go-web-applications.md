@@ -116,18 +116,18 @@ You just wrap your HTTP handlers with it:
 and then provide a CSRF token to your forms. To get the token for the current request, call `nosurf.Token`, giving the request as an argument. Your form should send it back as a `csrf_token` form value:
 
     func myHandler(w http.ResponseWriter, req *http.Request) {
-    token := nosurf.Token(req) // ⬅️
-    // ...
-    template := `<!doctype html>
-        <html><body>
-        <form action="/" method="POST">
-        <input type="hidden" name="csrf_token" value="{{`{{.CSRFToken}}`}}"> // ⬅️
-        ...
-        </form>
-        </body></html>`
-    // ...
-    // render template, setting CSRFToken to token value
-    // ..
+        token := nosurf.Token(req) // ⬅️
+        // ...
+        template := `<!doctype html>
+            <html><body>
+            <form action="/" method="POST">
+            <input type="hidden" name="csrf_token" value="{{`{{.CSRFToken}}`}}"> // ⬅️
+            ...
+            </form>
+            </body></html>`
+        // ...
+        // render template, setting CSRFToken to token value
+        // ..
     }
 
 _Nosurf_ will automatically block any POST request sent to `wrappedHandler` that doesn’t contain a valid `csrf_token`. (It won’t touch GET requests). That’s it!
