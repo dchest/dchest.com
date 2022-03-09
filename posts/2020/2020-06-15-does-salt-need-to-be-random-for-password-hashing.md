@@ -18,7 +18,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > number (by reading the real-time clock) and appends
 > this to the password typed in by the user. The concate
 > nated string is encrypted and both the 12-bit random
-> quantity (called the salt) and the 64-bit result of the
+> quantity (called the _salt_) and the 64-bit result of the
 > encryption are entered into the password file.
 >
 > When the user later logs in to the system, the 12-bit
@@ -29,7 +29,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > increase the task of finding any individual password
 > starting from scratch, but now the work of testing a given
 > character string against a large collection of encrypted
-> passwords has been multiplied by 4,096 (213). The reason
+> passwords has been multiplied by 4,096 (2<sup>12</sup>). The reason
 > for this is that there are 4,096 encrypted versions of each
 > password and one of them has been picked more or less
 > at random by the system.
