@@ -4,7 +4,7 @@ title: "Mac developers: don't use AQDataExtensions"
 tags: Cryptography, Programming
 ---
 
-[AQDataExtensions][AQDataExtensions] is an `NSData` category developed in 2005 by Lucas Newman
+[AQDataExtensions][AQDataExtensions] is an `NSData` category developed in 2005
 and distributed with [AquaticPrime][AquaticPrime] framework which "allows for easily encrypting
 and decrypting NSData objects with AES/Rijndael (i.e. the Advanced Encryption
 Standard)".
