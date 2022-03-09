@@ -16,8 +16,8 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > difficult as possible. To this end, when a password is first
 > entered, the password program obtains a 12-bit random
 > number (by reading the real-time clock) and appends
-> this to the password typed in by the user. The concate
-> nated string is encrypted and both the 12-bit random
+> this to the password typed in by the user. The concatenated
+> string is encrypted and both the 12-bit random
 > quantity (called the _salt_) and the 64-bit result of the
 > encryption are entered into the password file.
 >
@@ -42,7 +42,7 @@ This was already known to the Unix creators, according to the [paper](https://dl
 > Such an encrypted dictionary could be used to
 > crack new passwords in milliseconds when they appear.
 >
-> There is a (not inadvertent) side effect of this modifiction.
+> There is a (not inadvertent) side effect of this modification.
 > It becomes nearly impossible to find out whether
 > a person with passwords on two or more systems has
 > used the same password on all of them, unless you
