@@ -8,7 +8,43 @@ You probably know that salting is needed to make each password hash unique so th
 
 This was already known to the Unix creators, according to the [paper](https://dl.acm.org/doi/pdf/10.1145/359168.359172) written by Robert Morris and Ken Thompson in 1979:
 
-![Extract from RMS/Ken paper](/img/2020/salted-passwords.webp)
+> <b>3. Salted Passwords</b>
+>
+> The key search technique is still likely to turn up a
+> few passwords when it is used on a large collection of
+> passwords, and it seemed wise to make this task as
+> difficult as possible. To this end, when a password is first
+> entered, the password program obtains a 12-bit random
+> number (by reading the real-time clock) and appends
+> this to the password typed in by the user. The concate
+> nated string is encrypted and both the 12-bit random
+> quantity (called the salt) and the 64-bit result of the
+> encryption are entered into the password file.
+> When the user later logs in to the system, the 12-bit
+> quantity is extracted from the password file and appended
+> to the typed password. The encrypted result is
+> required, as before, to be the same as the remaining 64
+> bits in the password file. This modification does not
+> increase the task of finding any individual password
+> starting from scratch, but now the work of testing a given
+> character string against a large collection of encrypted
+> passwords has been multiplied by 4,096 (213). The reason
+> for this is that there are 4,096 encrypted versions of each
+> password and one of them has been picked more or less
+> at random by the system.
+> With this modification, it is likely that the bad guy
+> can spend days of computer time trying to find a pass.
+> word on a system with hundreds of passwords, and find
+> none at all. More important is the fact that it becomes
+> impractical to prepare an encrypted dictionary in advance.
+> Such an encrypted dictionary could be used to
+> crack new passwords in milliseconds when they appear.
+> There is a (not inadvertent) side effect of this modifiction.
+> It becomes nearly impossible to find out whether
+> a person with passwords on two or more systems has
+> used the same password on all of them, unless you
+> already know that.
+
 <figcaption>(They used the real-time clock as a pseudorandom number generator<br>to get 12 bits of salt, which was fine for the 1970s.)</figcaption>
 
 An attacker who gets your leaked hashes verifies guesses by hashing a password guess and comparing the result with a leaked hash. If there is no salt, the attacker can compare the current guess against every hash, and thus has more chances of finding the correct password for at least one of the users (and they can even precompute hashes before your password database leaks). However, if each password has been hashed with a unique salt, the attacker cannot do it — they will have to do the hashing (which is the expensive part) for each of the leaked hashes to see if they’ve got the match.
