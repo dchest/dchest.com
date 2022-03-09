@@ -4,7 +4,7 @@ permalink: /:year/:month/:day/:name/
 url: https://dchest.com
 
 tagindex:
-  permalink: /tags/:lctag/
+  permalink: /tag/:lctag/
   layout: tag
 
 search:
