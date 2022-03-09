@@ -5,14 +5,17 @@ title: Archive
 
 <h2>All articles</h2>
 
+{{range .Site.Posts.ByYear}}
+<h3>{{.Year}}</h3>
 <table class="articles" data-kkr-search="noindex">
-{{range .Site.Posts}}
+{{range .Posts}}
 <tr>
-<td class="date"><span class="text-muted">{{.Date.Format "2006-01-02"}}</span></td>
+<td class="date"><span class="text-muted">{{.Date.Format "Jan 02"}}</span></td>
 <td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
 </tr>
 {{end}}
 </table>
+{{end}}
 
 <br>
 
