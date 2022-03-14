@@ -326,6 +326,10 @@ main.book .disclaimer {
 }
 
 @media (max-width: 1000px) {
+    .buy.retailers {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .amazon-countries {
         columns: 2;
     }
