@@ -44,6 +44,9 @@ Header always set X-Content-Type-Options "nosniff"
 RedirectPermanent /nextcloud/ /2016/11/18/synchronizing-android-and-macos-with-nextcloud/
 RedirectPermanent /nearlyfreespeech/ /2016/10/23/nearlyfreespeech/
 RedirectPermanent /aqdataextensions/ /2011/07/12/aqdataextensions/
+RedirectPermanent /author/dchest /about/
+RedirectPermanent /author/ /about/
+RedirectPermanent /category/ /tag/
 
 RedirectPermanent /feed/ /atom.xml
 
