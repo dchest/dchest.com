@@ -31,11 +31,13 @@
 
 	{{.Content }}
 
-	<footer id="mf" data-kkr-search="noindex">
-		&copy; 2011-{{.Site.Date.Format "2006"}} <a rel="author" href="/about/">{{.Site.Author}}</a> &#183;
-		<a href="/terms/">Terms</a> &#183;
-		<a href="/search/"><a href="/search/">Search</a> &#183;
+	<footer data-kkr-search="noindex">
+	<div id="mf">
 		<a href="/atom.xml" class="feed atom">Feed</a>
+		&copy; 2011-{{.Site.Date.Format "2006"}} &nbsp; <a rel="author" href="/about/">{{.Site.Author}}</a> &nbsp; &#183; &nbsp; 
+		<a href="/terms/">Terms</a> &nbsp; &#183; &nbsp; 
+		<a href="/search/"><a href="/search/">Search</a>
+	</div>
 	</footer>
 {{ include "analytics.html" }}
 </body>
