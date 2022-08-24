@@ -51,7 +51,7 @@ some result produced by AI might
 be a derivative of my copyrighted work. It's up to you to decide what's better —
 a risk of an expensive lawsuit or paying a small licensing fee to avoid such risks.
 
-### Is this a FUD?
+### Is this FUD?
 
 Hmm, I'm not sure what "FUD" means and I'm afraid to look it up.
 
