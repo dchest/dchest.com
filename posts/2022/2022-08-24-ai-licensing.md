@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducing AI licensing for my works
+tags: Business
 ---
 
 
