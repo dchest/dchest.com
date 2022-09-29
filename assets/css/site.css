@@ -267,14 +267,6 @@ sup {
   top: -4px;
 }
 
-aside {
-	background: rgba(0, 0, 0, 0.01);
-	border: 1px solid #eee;
-	border-radius: 10px;
-	padding: 18px 28px;
-	opacity: 0.9;
-}
-
 aside h3 {
 	color: #887;
 	text-transform: uppercase;
