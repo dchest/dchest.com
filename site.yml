@@ -21,7 +21,7 @@ properties:
   twitter_name: dchest
   urls:
     twitter: https://twitter.com/dchest
-    mastodon: https://mastodon.social/dchest
+    mastodon: https://mastodon.social/@dchest
 
 compress:
   methods:
