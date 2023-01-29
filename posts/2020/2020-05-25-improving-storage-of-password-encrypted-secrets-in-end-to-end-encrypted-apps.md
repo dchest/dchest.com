@@ -57,6 +57,8 @@ The improvement that I propose on the server side looks like this:
 ![Improved auth storage](/img/2020/improved_auth_storage.webp)
 
 1.  Instead of deriving one key (aka hash, aka verifier) with the password hashing function, derive two keys: _serverEncKey_ and _verifier_. (The verifier has the same purpose as in the original scheme.)
+(Note: don't use the password hashing function twice! Instead, with a modern password hashing function derive a 64-byte output and split it into two 32-byte keys, or if you're stuck with PBKDF2, use HKDF to derive two keys from a single 32-byte output).
+
 2.  Encrypt _protectedKey_ received from the client with _serverEncKey_ and store the result of this encryption (_serverProtectedKey_) instead of _protectedKey_.
 
 That’s it. When a user logs in, perform the same key derivation, and if _verifier_ is correct, decrypt _serverProtectedKey_ to get the original _protectedKey_ and send it to the client. (In fact, if we use authenticated encryption, we can just use the fact that _serverProtectedKey_ is successfully decrypted to ensure that the user entered the correct password and not store the verifier, but I like the additional measure in case the authenticated encryption turns out to have side-channel or other vulnerabilities.)
