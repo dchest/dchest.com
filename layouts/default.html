@@ -43,8 +43,20 @@
 		&copy; 2011-{{.Site.Date.Format "2006"}} &nbsp; <a rel="author" href="/about/">{{.Site.Author}}</a> &nbsp; &#183; &nbsp;
 		<a href="/terms/">Terms</a> &nbsp; &#183; &nbsp;
 		<a href="/search/"><a href="/search/">Search</a>
-	</div>
+
+		{{if eq .Page.url "" }}
+		<!-- <hr style="margin-top: 6em; padding-top: 1px; background: #fff; border: 1px solid #ccc; border-top-color: #777; border-left-color: #777"> -->
+
+		<p style="margin-top: 5em; display: flex; gap: 1em">
+		<a href="https://www.codingrobots.com/memoires/"><img src="/img/memoires.gif" width="88" height="31" alt="Mémoires Now!"></a>
+
+		<a href="https://tintara.tripod.com/FramesSuck.html" rel="nofollow"><img src="/img/noframes.gif" width="88" height="31" alt="Campaign against FRAMES!"></a>
+		</p>
+		{{end}}
+		</div>
 	</footer>
+
+
 {{ include "analytics.html" }}
 </body>
 
