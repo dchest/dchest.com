@@ -22,6 +22,7 @@ properties:
   urls:
     twitter: https://twitter.com/dchest
     mastodon: https://mastodon.social/@dchest
+    pixelfed: https://pixelfed.social/dchest
 
 compress:
   methods:

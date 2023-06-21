@@ -61,7 +61,8 @@ address {
 
 main,
 #mf,
-#mh > nav {
+#mh > nav,
+#instr {
   display: block;
   max-width: 800px;
   margin: auto;
@@ -277,4 +278,9 @@ aside h3 {
 aside ul {
 	padding-left: 20px;
 	margin-bottom: 0;
+}
+
+#instr {
+  font-size: 8px;
+  color: #887;
 }
