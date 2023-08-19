@@ -24,15 +24,15 @@ properties:
     mastodon: https://mastodon.social/@dchest
     pixelfed: https://pixelfed.social/dchest
 
-compress:
-  methods:
-    - gzip
-    - br
-  extensions:
-    - txt
-    - html
-    - js
-    - css
-    - xml
-    - json
-    - svg
+#compress:
+#  methods:
+#    - gzip
+#    - br
+#  extensions:
+#    - txt
+#    - html
+#    - js
+#    - css
+#    - xml
+#    - json
+#    - svg
