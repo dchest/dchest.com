@@ -11,7 +11,7 @@ This is already supported by Chrome on Macs, but the importance of the new devel
 Here’s how it works, briefly. You sign up normally with username and password, and then add your device (iPhone, iPad, MacBook with Touch ID) for passwordless log in. The next time you sign in, you don’t even have to enter your password — your device will ask you for your fingerprint or face, and you’re in. Since the cryptographic keys used for WebAuthn are stored securely on the device, if you want to sign in on a different device, you will have to enter your password for the first log in.
 
 ![Screenshot](/img/2020/webauth-in-safari-platform-authenticator.webp)
-<figcaption>[Meet Face ID and Touch ID for the web](https://developer.apple.com/videos/play/wwdc2020/10670/) WWDC 2020 video</figcaption>
+<figcaption><a href="https://developer.apple.com/videos/play/wwdc2020/10670/">Meet Face ID and Touch ID for the web</a> WWDC 2020 video</figcaption>
 
 This flow is much better than the standard two-factor authentication flow, and I expect it to replace TOTP, 2FA with WebAuthn/U2F, and other multifactor authentication methods for most people, now that platform authenticators are becoming available on iOS, iPadOS, macOS, Android, and Windows (with Windows Hello). Which is great, because nobody wants 2FA unless they are forced to use it. (We still need a [solution for the first sign in on device](https://twitter.com/dchest/status/1276957930487758849), though.)
 
