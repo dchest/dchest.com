@@ -18,7 +18,15 @@
 	{{with .Page.image}}<meta property="og:image" content="{{.}}">{{end}}
 	  <title>{{with .Page.seo_title}}{{.}}{{else}}{{.Page.title}} - {{.Site.Name}}{{if .Page.is_post}}{{end}}{{end}}</title>
 	<style>{{asset "global-css"}}</style>
-	{{if .Page.book_css}}<style>{{asset "book-css"}}</style>{{end}}
+	{{if .Page.book_css}}
+	<style>{{asset "book-css"}}</style>
+	<script
+		id="fsc-api"
+		src="https://sbl.onfastspring.com/sbl/1.0.1/fastspring-builder.min.js"
+		type="text/javascript"
+		data-storefront="codingrobots.onfastspring.com/popup-codingrobots">
+	</script>
+	{{end}}
 </head>
 
 <body>
