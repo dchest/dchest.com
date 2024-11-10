@@ -20,7 +20,8 @@ properties:
   like_title: "dchest.com"
   twitter_name: dchest
   urls:
-    twitter: https://twitter.com/dchest
+    twitter: https://x.com/dchest
+    bluesky: https://bsky.app/profile/dchest.com
     mastodon: https://mastodon.social/@dchest
     pixelfed: https://pixelfed.social/dchest
 
