@@ -68,6 +68,17 @@ description: Dmitry Chestnykh's blog about tools, online business, technology, p
 <!-- <p>(!) I also write about software development at <a href="https://zine.dev"><b>zine.dev</b></a>. Check it out!</p> -->
 
 <table class="articles" data-kkr-search="noindex">
+{{range .Site.Posts}}
+<tr>
+<td class="date">{{.Date.Format "Jan 02, 2006"}}</td>
+<td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
+</tr>
+{{end}}
+</table>
+
+<h3>See also</h3>
+
+<table class="articles" data-kkr-search="noindex">
   <tr>
     <td class="date">May 31, 2024</td>
     <td class="title"><a href="https://blog.iwl.me/2024/05/31/introducing-new-iwl/">Introducing the new I Write Like <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></td>
@@ -75,13 +86,7 @@ description: Dmitry Chestnykh's blog about tools, online business, technology, p
   <tr>
     <td class="date">Mar 25, 2024</td>
     <td class="title"><a href="https://calcish.com/blog/2024/03/25/release/">Calcish 1.0 is here! <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></td>
-    </tr>
-{{range .Site.Posts}}
-<tr>
-<td class="date">{{.Date.Format "Jan 02, 2006"}}</td>
-<td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
-</tr>
-{{end}}
+  </tr>
 </table>
 
 <h3>Tags</h3>
