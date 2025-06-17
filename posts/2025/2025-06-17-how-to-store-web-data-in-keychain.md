@@ -1,5 +1,6 @@
 ---
 title: "How to store web app data in the system keychain"
+tags: Programming, Security, Cryptography
 ---
 
 While there are no APIs to store web app data in the system keychain, there is a simple method that allows you do _almost the same thing_ using WebCrypto API. This also applies to native apps that use WKWebView.

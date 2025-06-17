@@ -16,6 +16,8 @@ search:
 filters:
   .html: [htmlmin, scripts, styles]
 
+sitemap: /sitemap.xml
+
 properties:
   like_title: "dchest.com"
   twitter_name: dchest
