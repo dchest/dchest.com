@@ -83,7 +83,7 @@ Store the encrypted data anywhere you like, for example, in `IndexedDB` or `loca
 
 ## What about the keychain?
 
-If you store a `CryptoKey` in `IndexedDB`, it will be encrypted by another key stored in the system keychain (or other mechanism that eventually uses the keychain). If you have an app that uses `WKWebView`, the this encryption key will be specific to the app.
+If you store a `CryptoKey` in `IndexedDB`, it will be encrypted by another key stored in the system keychain (or other mechanism that eventually uses the keychain). If you have an app that uses `WKWebView`, then this encryption key will be specific to the app.
 
 ![WebCrypto Master Key for an app](/img/2025/webcrypto-master-key.png)
 
