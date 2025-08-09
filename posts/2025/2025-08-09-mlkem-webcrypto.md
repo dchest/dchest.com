@@ -27,7 +27,7 @@ Unlike with my previous crypto libraries, I wrote none of the ML-KEM code myself
 
 While it calls WASM, it would not be hard to customize it to use a different ML-KEM implementation, for example, if you want to use Apple's CryptoKit with a WKWebView-based native app. I will probably release bindings for it when the time comes (assuming native WebCrypto API comes later than that).
 
-It's fast, here are benchmarks results on my M1 MacBook Air in Chromium:
+It's fast, here are benchmark results on my M1 MacBook Air in Chromium:
 
 ```
 Benchmark Results (10000 iterations each):
