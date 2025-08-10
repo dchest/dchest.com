@@ -3,7 +3,7 @@ title: ML-KEM in WebCrypto API
 tags: Programming, Security, Cryptography
 ---
 
-[Web Cryptography API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) is not everyone's favorite thing, but it's the only way to do cryptography client-side in web browsers or web views if you want to avoid third-party libraries (e.g., for compliance reasons, or to [save keys securely in IndexedDB](http://localhost:8080/2025/06/17/how-to-store-web-data-in-keychain/)).
+[Web Cryptography API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) is not everyone's favorite thing, but it's the only way to do cryptography client-side in web browsers or web views if you want to avoid third-party libraries (e.g., for compliance reasons, or to [save keys securely in IndexedDB](/2025/06/17/how-to-store-web-data-in-keychain/)).
 
 Only [recently](https://caniuse.com/?search=X25519) have we gotten wide [X25519 and Ed25519 support](https://wicg.github.io/webcrypto-secure-curves/) in browsers.
 
