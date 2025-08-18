@@ -5,41 +5,48 @@ seo_title: dchest.com
 description: Dmitry Chestnykh's blog about tools, online business, technology, programming, and life.
 ---
 <style>
-.homebook {
-  display: grid;
-  grid-template-columns: min-content auto;
-  gap: 20px;
-  margin-left: -15px;
-}
-.homebook-desc {
-  align-self: center;
-  max-width: 600px;
-}
-.homebook-img {
-  max-width: 150px;
-}
-@media (max-width: 767px) {
   .homebook {
-    margin-left: 0;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 20px;
+    margin-left: -15px;
   }
-  .homebook-img {
-    max-width: 60px;
-  }
+
   .homebook-desc {
-    align-self: stretch;
-    max-width: 100%;
+    align-self: center;
+    max-width: 600px;
   }
-  .homebook-desc h3 {
-    margin-top: 0;
+
+  .homebook-img {
+    max-width: 150px;
   }
-}
+
+  @media (max-width: 767px) {
+    .homebook {
+      margin-left: 0;
+    }
+
+    .homebook-img {
+      max-width: 60px;
+    }
+
+    .homebook-desc {
+      align-self: stretch;
+      max-width: 100%;
+    }
+
+    .homebook-desc h3 {
+      margin-top: 0;
+    }
+  }
 </style>
 
 <h2>Books</h2>
 
 <div class="homebook">
   <div>
-    <a href="/authbook/"><img class="homebook-img" src="/img/authbook/auth-book-small.webp" alt="Password authentication for web and mobile apps - Book cover"></a>
+    <a href="/authbook/"><img class="homebook-img" src="/img/authbook/auth-book-small.webp"
+        alt="Password authentication for web and mobile apps - Book cover"></a>
   </div>
   <div class="homebook-desc">
     <h3><a href="/authbook/">Password Authentication for Web and Mobile Apps</a></h3>
@@ -48,18 +55,23 @@ description: Dmitry Chestnykh's blog about tools, online business, technology, p
       how to hash and store passwords, use sessions and tokens,
       prevent common attacks, and more.
     </p>
-    <p><a href="/authbook/">Get the book <svg style="vertical-align: text-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg></a></p>
+    <p><a href="/authbook/">Get the book <svg style="vertical-align: text-bottom" xmlns="http://www.w3.org/2000/svg"
+          width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg></a></p>
   </div>
 </div>
 
 <h2>Software</h2>
 
 <ul style="padding-left:20px; list-style: square; color: #777">
-  <li><span style="color: red">New!</span> <a href="https://iwl.me"><b>I Write Like</b>: a web-based Markdown text editor with various writing analysis tools.</a></li>
-  <li><span style="color: red">New!</span> <a href="https://calcish.com"><b>Calcish</b> = Calculator + JavaScript + AI + Notebook</a>.</li>
-  <li><a href="https://www.codingrobots.com">Check out some useful apps for Mac by my company, <i>Coding Robots</i>.</a></li>
+  <li><span style="color: red">New!</span> <a href="https://iwl.me"><b>I Write Like</b>: a web-based Markdown text
+      editor with various writing analysis tools.</a></li>
+  <li><span style="color: red">New!</span> <a href="https://calcish.com"><b>Calcish</b> = Calculator + JavaScript + AI +
+      Notebook</a>.</li>
+  <li><a href="https://www.codingrobots.com">Check out some useful apps for Mac by my company, <i>Coding Robots</i>.</a>
+  </li>
   <li><a href="https://github.com/dchest">My open source projects are on GitHub.</a></li>
 </ul>
 
@@ -68,30 +80,55 @@ description: Dmitry Chestnykh's blog about tools, online business, technology, p
 <!-- <p>(!) I also write about software development at <a href="https://zine.dev"><b>zine.dev</b></a>. Check it out!</p> -->
 
 <table class="articles" data-kkr-search="noindex">
-{{range .Site.Posts}}
-<tr>
-<td class="date">{{.Date.Format "Jan 02, 2006"}}</td>
-<td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
-</tr>
-{{end}}
+  {{range .Site.Posts}}
+  <tr>
+    <td class="date">{{.Date.Format "Jan 02, 2006"}}</td>
+    <td class="title"><a href="{{.Meta.url}}">{{.Meta.title}}</a></td>
+  </tr>
+  {{end}}
 </table>
 
 <h3>See also</h3>
 
 <table class="articles" data-kkr-search="noindex">
   <tr>
+    <td class="date">Aug 18, 2025</td>
+    <td class="title"><a href="https://iwl.me/tools/markdown-to-word">Convert Markdown to Word <svg
+          xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-external-link">
+          <path d="M15 3h6v6" />
+          <path d="M10 14 21 3" />
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        </svg></a></td>
+  </tr>
+  <tr>
     <td class="date">May 31, 2024</td>
-    <td class="title"><a href="https://blog.iwl.me/2024/05/31/introducing-new-iwl/">Introducing the new I Write Like <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></td>
-    </tr>
+    <td class="title"><a href="https://blog.iwl.me/2024/05/31/introducing-new-iwl/">Introducing the new I Write Like
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-external-link">
+          <path d="M15 3h6v6" />
+          <path d="M10 14 21 3" />
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        </svg></a></td>
+  </tr>
   <tr>
     <td class="date">Mar 25, 2024</td>
-    <td class="title"><a href="https://calcish.com/blog/2024/03/25/release/">Calcish 1.0 is here! <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></td>
+    <td class="title"><a href="https://calcish.com/blog/2024/03/25/release/">Calcish 1.0 is here! <svg
+          xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-external-link">
+          <path d="M15 3h6v6" />
+          <path d="M10 14 21 3" />
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        </svg></a></td>
   </tr>
 </table>
 
 <h3>Tags</h3>
 <p data-kkr-search="noindex">
-{{range $index, $tag := .Site.TagList}}
-<a href="{{$.Site.TagURL $tag}}">{{$tag}}</a>{{if lt $index (lastindex $.Site.TagList)}} &#183; {{end}}
-{{end}}
+  {{range $index, $tag := .Site.TagList}}
+  <a href="{{$.Site.TagURL $tag}}">{{$tag}}</a>{{if lt $index (lastindex $.Site.TagList)}} &#183; {{end}}
+  {{end}}
 </p>
