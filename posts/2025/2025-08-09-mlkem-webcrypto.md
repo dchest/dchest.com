@@ -55,3 +55,5 @@ The source code is at <https://github.com/dchest/mlkem-wasm>. Don't forget to re
 Note that since ML-KEM is fairly new and less studied compared to elliptic curve algorithms, most implement it _in addition_ to classical algorithms via various hybrid schemes alongside X25519 or P-256, not replacing them.
 
 So, my plan is to use `mlkem-wasm` in production until the WebCrypto API with ML-KEM ships in all browsers, and then switch to it with minimal changes.
+
+_Update (2025-08-26)_: I also implemented ML-DSA-65 post-quantum signature algorithm (previously known as Dilithium3) in a separate package: [mldsa-wasm](https://github.com/dchest/mldsa-wasm).
